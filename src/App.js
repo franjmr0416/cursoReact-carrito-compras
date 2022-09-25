@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import Layout from "./components/Layout";
+import Productos from "./components/Productos";
+import Title from "./components/Title";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    productos: [
+      {
+        name: "MacBook Air M1",
+        price: 25999,
+        img: "/productos/macbook-air.jpg",
+      },
+      { name: "Mac Mini M1", price: 17999, img: "/productos/mac-mini.jpg" },
+      { name: "iMac M1", price: 43999, img: "/productos/imac.jpg" },
+    ],
+  };
+  render() {
+    return (
+      <div>
+        <Layout>
+          <Title />
+          <Productos
+            agregarAlCarro={() => console.log("hola")}
+            productos={this.state.productos}
+          />
+        </Layout>
+      </div>
+    );
+  }
 }
 
 export default App;
