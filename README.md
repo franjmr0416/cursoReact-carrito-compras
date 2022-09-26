@@ -1,3 +1,6 @@
+# Curso React Carrito de compras
+![image](https://user-images.githubusercontent.com/51140256/192202008-3b685eab-59e9-42f3-b2f7-a6b4568cff8c.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
